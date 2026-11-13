@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Balachandran S - Cloud and DevOps Engineer portfolio">
+<title>Balachandran S | Cloud & DevOps Portfolio</title>
+<style>
+:root{--bg:#071326;--panel:rgba(17,37,67,.78);--line:rgba(148,185,235,.18);--text:#edf5ff;--muted:#a9bdd8;--cyan:#69d9ff;--violet:#a78bfa}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at 15% 5%,#183b68 0,transparent 34%),radial-gradient(circle at 90% 35%,#30265f 0,transparent 28%),linear-gradient(135deg,#050d1b,#091a33 55%,#0b1530);line-height:1.65}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(5,13,27,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:800;letter-spacing:.5px}.logo span{color:var(--cyan)}
+.navlinks{display:flex;gap:22px;flex-wrap:wrap;font-size:.9rem;color:var(--muted)}.navlinks a:hover{color:var(--cyan)}
+.hero{min-height:590px;display:grid;grid-template-columns:1.35fr .65fr;align-items:center;gap:45px;padding:75px 0}
+.eyebrow{color:var(--cyan);text-transform:uppercase;letter-spacing:3px;font-size:.78rem;font-weight:700}
+h1{font-size:clamp(2.7rem,6vw,5rem);line-height:1.05;margin:14px 0 18px;letter-spacing:-2px}
+h1 span{background:linear-gradient(90deg,var(--cyan),#b8a4ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:1.12rem;max-width:680px}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:12px 20px;border-radius:12px;border:1px solid var(--line);font-weight:700;display:inline-block;transition:.2s}
+.btn.primary{background:linear-gradient(110deg,#1688b7,#6556bd);border:0;box-shadow:0 12px 30px #1688b733}.btn:hover{transform:translateY(-3px)}
+.profile-card{background:linear-gradient(145deg,rgba(49,91,145,.5),rgba(29,25,69,.72));border:1px solid #9bcaff35;border-radius:28px;padding:28px;text-align:center;box-shadow:18px 18px 45px #02081780,inset 1px 1px 0 #ffffff20;transform:perspective(900px) rotateY(-5deg)}
+.avatar{width:150px;height:150px;border-radius:50%;margin:5px auto 20px;display:block;object-fit:cover;object-position:center 28%;border:3px solid #8bdfff;box-shadow:0 15px 35px #55d6f555}
+.profile-card p{color:var(--muted);margin:6px 0}.chips{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:18px}
+.chip{font-size:.78rem;color:#cceaff;border:1px solid var(--line);background:#ffffff09;padding:6px 10px;border-radius:30px}
+section{padding:76px 0}.section-title{font-size:2rem;margin:0 0 8px}.section-sub{color:var(--muted);margin:0 0 30px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:19px;padding:23px;box-shadow:0 14px 35px #02081735;transition:.25s}
+.card:hover{transform:translateY(-6px);border-color:#69d9ff66;box-shadow:0 20px 40px #02081770}
+.card h3{margin:0 0 9px}.card p,.card li{color:var(--muted);font-size:.95rem}.icon{font-size:1.6rem;margin-bottom:10px}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.skill{padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:#ffffff08}
+.skill strong{display:block;margin-bottom:5px}.skill span{color:var(--muted);font-size:.93rem}
+.timeline{border-left:2px solid #69d9ff66;padding-left:25px;margin-left:8px}.timeline-item{position:relative;margin:0 0 25px}.timeline-item:before{content:"";position:absolute;left:-33px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--cyan);box-shadow:0 0 18px #69d9ff}
+.meta{color:var(--cyan);font-size:.86rem;font-weight:700}
+.project{display:flex;flex-direction:column;min-height:100%}.project .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:16px}
+.tags span{font-size:.75rem;padding:5px 9px;border-radius:20px;background:#69d9ff13;color:#aeeaff;border:1px solid #69d9ff2c}
+.contact-box{background:linear-gradient(120deg,#15385caa,#30275eaa);border:1px solid var(--line);border-radius:24px;padding:32px;display:flex;justify-content:space-between;align-items:center;gap:25px;flex-wrap:wrap}
+.contact-links{display:flex;gap:12px;flex-wrap:wrap}.contact-links a{color:var(--cyan);word-break:break-word}
+footer{text-align:center;color:var(--muted);padding:28px;border-top:1px solid var(--line);font-size:.85rem}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding:55px 0}.profile-card{max-width:430px;margin:auto;transform:none}.grid{grid-template-columns:1fr 1fr}.navlinks{gap:11px;font-size:.8rem}}
+@media(max-width:560px){nav{height:auto;padding:15px 0;align-items:flex-start;flex-direction:column}.navlinks{font-size:.78rem}.grid,.skills{grid-template-columns:1fr}section{padding:55px 0}.hero{min-height:auto}h1{letter-spacing:-1px}.contact-box{padding:23px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="logo" href="#home">BALACHANDRAN<span>.</span></a>
+<div class="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a></div>
+</nav></div></header>
+<main>
+<div class="wrap">
+<section class="hero" id="home">
+<div>
+<div class="eyebrow">Cloud • DevOps • Automation</div>
+<h1>Hi, I'm <span>Balachandran S</span></h1>
+<p class="lead">Cloud &amp; DevOps Engineer (Fresher) with hands-on learning in AWS, Docker, Kubernetes, Jenkins and Linux. Interested in building, deploying and maintaining reliable cloud infrastructure.</p>
+<div class="actions"><a class="btn primary" href="#projects">Explore My Projects</a><a class="btn" href="#contact">Contact Me</a></div>
+</div>
+<div class="profile-card"><img class="avatar" src="BALACHANDRAN_PHOTO.jpg" alt="Balachandran S profile photo"><h2>Balachandran S</h2><p>Cloud &amp; DevOps Engineer</p><p>Karur, Tamil Nadu</p><div class="chips"><span class="chip">AWS</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Jenkins</span><span class="chip">Linux</span></div></div>
+</section>
+
+<section id="about">
+<h2 class="section-title">About Me</h2><p class="section-sub">A quick introduction</p>
+<div class="card"><p>I am an MCA graduate (2026) with a three-month Cloud &amp; DevOps internship. I have hands-on exposure to containerizing applications with Docker and deploying them on Kubernetes (Amazon EKS). My learning includes CI/CD with Jenkins, Linux administration and AWS networking. I focus on checking each deployment layer, including load balancer access, target health, pod readiness and security group connectivity.</p></div>
+</section>
+
+<section id="skills">
+<h2 class="section-title">Technical Skills</h2><p class="section-sub">Tools and technologies from my learning and project work</p>
+<div class="skills">
+<div class="skill"><strong>☁️ Cloud – AWS</strong><span>AWS Cloud Services, AWS Networking, Amazon EKS, Amazon ECR</span></div>
+<div class="skill"><strong>📦 Containers &amp; Orchestration</strong><span>Docker, Kubernetes, NGINX</span></div>
+<div class="skill"><strong>🔁 CI/CD &amp; Automation</strong><span>Jenkins, CI/CD Pipelines, testing, deployment and monitoring</span></div>
+<div class="skill"><strong>🐧 Operating Systems</strong><span>Linux Administration</span></div>
+<div class="skill"><strong>⌨️ Scripting &amp; Data</strong><span>Python (basics), SQL, DBMS, C</span></div>
+<div class="skill"><strong>🎨 Web &amp; Design</strong><span>HTML, CSS, Figma UI/UX</span></div>
+</div>
+</section>
+
+<section id="experience">
+<h2 class="section-title">Experience</h2><p class="section-sub">Internship experience</p>
+<div class="timeline"><div class="timeline-item"><div class="meta">3 MONTHS</div><h3>Cloud &amp; DevOps Intern</h3><strong>Twincord Technologies</strong><ul><li>Used Jenkins for testing, deployment, monitoring and automation within CI/CD pipelines.</li><li>Worked hands-on with Docker, AWS cloud services and Linux administration to support cloud deployments.</li></ul></div></div>
+</section>
+
+<section id="projects">
+<h2 class="section-title">Projects</h2><p class="section-sub">Selected academic and technical projects</p>
+<div class="grid">
+<div class="card project"><div class="icon">🚀</div><h3>Dockerfile to Live on EKS</h3><p>Containerized an NGINX application with a custom Docker image, pushed it to Amazon ECR and deployed it to Amazon EKS using Kubernetes Deployment manifests. Used multiple replicas, readiness checks and a Load Balancer Service. Validated load balancer access, target health, pod readiness and security group connectivity.</p><div class="tags"><span>Docker</span><span>Amazon ECR</span><span>Amazon EKS</span><span>Kubernetes</span><span>NGINX</span></div></div>
+<div class="card project"><div class="icon">🎨</div><h3>On-Stream Portal for Paint Shop</h3><p>A web platform designed to showcase paint products and services through a customer-friendly interface and digital product management.</p><div class="tags"><span>Web Platform</span><span>Product Display</span></div></div>
+<div class="card project"><div class="icon">🌏</div><h3>Culture &amp; Heritage Platform</h3><p>A community platform for sharing cultural traditions, with features for posts, likes, comments and user interactions.</p><div class="tags"><span>Community</span><span>Posts</span><span>Engagement</span></div></div>
+</div>
+</section>
+
+<section id="education">
+<h2 class="section-title">Education</h2><p class="section-sub">Academic background</p>
+<div class="grid">
+<div class="card"><div class="meta">2024 – 2026</div><h3>Master of Computer Applications (MCA)</h3><p>Kongu Engineering College, Erode</p><strong>CGPA: 7.95</strong></div>
+<div class="card"><div class="meta">2021 – 2024</div><h3>B.Sc. Computer Science</h3><p>Kongu Engineering College, Erode</p><strong>CGPA: 7.24</strong></div>
+<div class="card"><h3>Higher Secondary</h3><p>Higher Secondary Education</p><strong>79.3%</strong></div>
+</div>
+</section>
+
+<section id="training">
+<h2 class="section-title">Training &amp; Leadership</h2><p class="section-sub">Additional learning and activities</p>
+<div class="grid">
+<div class="card"><h3>Cloud Computing &amp; DevOps Program</h3><p>AWS Services, Linux, SQL, Python, Docker, Kubernetes and DevOps.</p></div>
+<div class="card"><h3>Data Science for Engineers</h3><p>NPTEL course.</p></div>
+<div class="card"><h3>Leadership &amp; Volunteering</h3><p>Rotaract Club Coordinator; Youth Red Cross (YRC) Member.</p></div>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Let's Connect</h2><p class="section-sub">I'm interested in entry-level Cloud and DevOps opportunities.</p>
+<div class="contact-box"><div><h2 style="margin:0 0 6px">Balachandran S</h2><div style="color:var(--muted)">Karur, Tamil Nadu · +91 6382126990</div><div><a class="contact-links" href="mailto:sashwinkarur2@gmail.com">sashwinkarur2@gmail.com</a></div></div>
+<div class="contact-links"><a href="https://github.com/balachandrann07" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/balachandran-subramaniam-11486a35a/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://leetcode.com/user7223lL/" target="_blank" rel="noopener">LeetCode ↗</a></div></div>
+</section>
+</div>
+</main>
+<footer>© 2026 Balachandran S · Cloud &amp; DevOps Portfolio</footer>
+</body>
+</html>
